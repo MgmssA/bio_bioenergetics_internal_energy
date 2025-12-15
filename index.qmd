@@ -195,7 +195,7 @@ $$
 Betrachte dieselben Beispiele wie in @sec-etrans-sys. Wenn das System (s) Arbeit leistet, dann ist es schwer, sich vorzustellen wie (s) die Umgebung (u) anschiebt. Die Umgebung ist nicht greifbar. Trotzdem können wir schreiben
 
 $$
-W\sub{s} + E\sub{u} = 0.
+W\sub{s} + W\sub{u} = 0.
 $$
 
 Ebenso verhält es sich mit der Wärmeenergieänderung. Die Umgebung (u) könnte zum Beispiel auch das gesamte Universum darstellen. Aber dessen Wärmekapazität könnte sehr groß sein und dadurch wäre ein Aufspalten der Wärmeenergieänderung in Wärmekapazität und Temperaturänderung unsinnig. Trotzdem können wir auch hier schreiben
