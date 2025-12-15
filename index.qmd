@@ -144,16 +144,16 @@ $$
 W\sub{s} = -F\sub{s} \cdot \Delta s\sub{s} < 0.
 $$
 
-Das System (s) verliert die Energie $W\sub{s}$; also ist der Betrag von $W\sub{s}$ negativ. Dadurch wird die kinetische Energie des Systems (p) um $E\sub{kin}$ gesteigert und es gilt
+Das System (s) verliert die Energie $W\sub{s}$; also ist der Betrag von $W\sub{s}$ negativ. Diese Energie wird nun in System (p) hineingesteckt und dadurch wird es beschleunigt. Das System (p) erfährt dabei eine Kraft $F$, die in die entgegengesetzte Richtung zeigt. Dadurch ist
 
 $$
-E\sub{kin,p} > 0.
+W\sub{s} = -(-F\sub{s}) \cdot \Delta s\sub{s} > 0.
 $$
 
 Die Energieerhaltung sagt, dass das System (p) nur soviel Energie bekommen kann wie System (s) leistet. Mehr geht nicht! Wenn Du das Universum bist, dann ist aus Deiner allwissenden Sicht folgendes passiert
 
 $$
-W\sub{s} + E\sub{kin,p} = 0.
+W\sub{s} + W\sub{p} = 0.
 $$
 
 Das bedeutet, dass Du als Universum diese zwei Energien als entgegengesetzt wahrnimmst. Das ist klar: wenn die Energie von (s) in eine Richtung will, muss die Energie von (p) in die entgegengesetzte. Das ist eine Folge der Energieerhaltung.
