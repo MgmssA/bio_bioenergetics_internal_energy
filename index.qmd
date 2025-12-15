@@ -1,0 +1,292 @@
+{{< include _includes/_front_matter.qmd >}}
+{{< include _includes/_init_fontawesome.qmd >}} 
+{{< include _includes/_katex_macros.qmd >}} 
+{{< include _includes/_r_themes.qmd >}}
+<!-- {{< include _includes/_r_rating_init.qmd >}} -->
+
+<!-- {{< include _level_1.qmd >}} -->
+<!-- {{< include _level_2.qmd >}} -->
+<!-- {{< include _level_3.qmd >}} -->
+
+<!-- {{< include _includes/_r_rating.qmd >}} -->
+
+::: {.callout-important collapse="true"}
+
+## Rückblick - Arbeit und Wärme
+
+Wir haben im letzten Abschnitt zwei Formen von Energie kennengelernt, die etwas in der Welt bewirken. 
+
+Die mechanische Arbeit wird genutzt, um etwas zu beschleunigen, abzubremsen, zu heben oder zu senken, zu füllen oder leeren, auszudehnen oder zu komprimieren, und vieles mehr. Durch mechanische Arbeit bewegen sich alle kleinen Teilchen aus denen die Materie besteht in die gleiche Richtung.
+
+Wichtig für die Berechnung der mechanischen Arbeit $W$ ist die Definition der Arbeit:
+
+$$ 
+W = -F \delta s.
+$$
+
+mit $F$ stehend für die wirkende Kraft und $\Delta s$ die Wegstrecke über der die Kraft wirkt.
+
+Wir hatten weiterhin festgestellt, dass die Wärmeenergie für Temperaturänderungen verantwortlich ist. Die Definition der Wärmeenergie $Q$ für offene Systeme und dadurch für die Mehrzahl der im Alltag bekannten Systeme ist
+
+$$
+Q = C_{p} \Delta T.
+$$
+
+Dabei ist $C_{p}$ die Wärmekapazität des betrachteten Systems bei konstantem Druck und $\Delta T$ die Temperaturänderung. 
+
+Die Wärmekapazität des Systems lässt sich auf zwei Arten etwas flexibler verwenden. Man kann sie auf die verwendete Masse des Systems als spezifische Wärmekapazität $C_{p,m}$ verwenden. Dadurch ist $C_p = m \cdot C_{p,m}$. Oder sie lässt sich auf die verwendete Stoffmenge $n$ beziehen und dann verwenden wir die molare Wärmekapazität $C_{p,n}$ und es ist $C_p = n \cdot C_{p,n}$.
+
+:::
+
+## Ein noch tieferer Blick
+
+Wir haben die Auswirkungen der Arbeit und der Wärmeenergie kennengelernt. In vielen Fällen ist nicht klar woher die Energie für die mechanische Arbeit kommt. In einigen Fällen ist nicht klar wohin zum Beispiel die wärmeenergie gesteckt wird. Hierfür wirst Du in diesem Dokument einige Antworten finden.
+
+## Das Universum
+
+Die Thermodynamik bietet eine sehr vereinfachte Weltsicht. Sie teilt das Universum in zwei Bereiche ein: das **System** und die **Umgebung**. Einfach, oder?
+
+### Systeme
+
+Was ist ein System? Nun, das kann alles sein. Es gibt einfache Systeme wie ein Luftballon gefüllt mit Luft oder eine Wärmflasche gefüllt mit warmen Wasser. Das können aber auch komplizierte Maschinen sein wie ein Kühlschrank oder Dein Körper. Auch hier wird es einfach. Die einzige Unterscheidung zwischen den Systemen ist nicht die Komplexität, sondern die Art wie die Systeme mit der Umgebung interagieren (siehe @fig-three-systems). 
+
+::: {#fig-three-systems layout-ncol=3}
+
+```{mermaid}
+%%| fig-height: 3
+flowchart LR
+    classDef icon shape:rounded,fill:#F4F4E7,stroke:#F4F4E7,font-size:28px;
+    classDef text fill:#00000000,stroke:#00000000;
+    classDef empty height:0,width:0;
+    classDef open stroke-width:0px;
+    classDef isolated stroke:#222222,stroke-width:10px;
+    style open rx:10px, ry:10px, fill:#E1E1D5, stroke:#E1E1D5; 
+
+    subgraph open [Offen]
+        heatsys["$$\textcolor{#477A43}{Q_{\mathrm{s}}}$$"]:::text
+        worksys["$$\textcolor{#477A43}{W_{\mathrm{s}}}$$"]:::text
+        masssys["$$\textcolor{#477A43}{m_{\mathrm{s}}}$$"]:::text
+    end
+    heatsur["$$\textcolor{#477A43}{Q_{\mathrm{u}}}$$"]:::text
+    worksur["$$\textcolor{#477A43}{W_{\mathrm{u}}}$$"]:::text
+    masssur["$$\textcolor{#477A43}{m_{\mathrm{u}}}$$"]:::text
+    heatsys <--> heatsur
+    worksys <--> worksur
+    masssys <--> masssur
+    linkStyle 0,1,2 stroke:#477A43
+```
+
+```{mermaid}
+%%| fig-height: 3
+flowchart LR
+    classDef icon shape:rounded,fill:#F4F4E7,stroke:#F4F4E7,font-size:28px;
+    classDef text fill:#00000000,stroke:#00000000;
+    classDef greenText fill:#00000000,stroke:#477A43;
+    classDef empty height:0,width:0;
+    classDef open stroke-width:0px;
+    classDef isolated stroke:#222222,stroke-width:10px;
+    classDef redEdge stroke:#ff0000,stroke-width:2px;
+
+    style closed rx:10px, ry:10px, fill:#E1E1D5, stroke:#5C6064;
+
+    subgraph closed [Geschlossen]
+        heatsys["$$\textcolor{#477A43}{Q_{\mathrm{s}}}$$"]:::text
+        worksys["$$\textcolor{#D44D39}{W_{\mathrm{s}}}$$"]:::text
+        masssys["$$\textcolor{#D44D39}{m_{\mathrm{s}}}$$"]:::text
+    end
+    heatsur["$$\textcolor{#477A43}{Q_{\mathrm{u}}}$$"]:::text
+    worksur["$$\textcolor{#D44D39}{W_{\mathrm{u}}}$$"]:::text
+    masssur["$$\textcolor{#D44D39}{m_{\mathrm{u}}}$$"]:::text
+    heatsys <--> heatsur
+    worksys x--x worksur
+    masssys x--x masssur
+    linkStyle 0 stroke:#477A43
+    linkStyle 1,2 stroke:#D44D39
+```
+
+```{mermaid}
+%%| fig-height: 3
+flowchart LR
+    classDef icon shape:rounded,fill:#F4F4E7,stroke:#F4F4E7,font-size:28px;
+    classDef text fill:#00000000,stroke:#00000000;
+    classDef empty height:0,width:0;
+    classDef open stroke-width:0px;
+    classDef isolated stroke:#222222,stroke-width:10px;
+    classDef redEdge stroke:#ff0000,stroke-width:2px;
+    style isolated rx:10px, ry:10px, fill:#E1E1D5, stroke:#5C6064, stroke-width:10px;
+
+    subgraph isolated [Isoliert]
+        heatsys["$$\textcolor{#D44D39}{Q_{\mathrm{s}}}$$"]:::text
+        worksys["$$\textcolor{#D44D39}{W_{\mathrm{s}}}$$"]:::text
+        masssys["$$\textcolor{#D44D39}{m_{\mathrm{s}}}$$"]:::text
+    end
+    heatsur["$$\textcolor{#D44D39}{Q_{\mathrm{u}}}$$"]:::text
+    worksur["$$\textcolor{#D44D39}{W_{\mathrm{u}}}$$"]:::text
+    masssur["$$\textcolor{#D44D39}{m_{\mathrm{u}}}$$"]:::text
+    heatsys x--x heatsur
+    worksys x--x worksur
+    masssys x--x masssur
+    linkStyle 0,1,2 stroke:#D44D39
+```
+
+In der Thermodynamik tauschen Systeme (s) mit ihrer Umgebung (u) lediglich drei Sachen aus: Wärme $Q$, Arbeit $W$ und Masse $m$. Aber das geschieht nicht zu gleichen Teilen. Offene Systeme tauschen Wärme, Arbeit und Masse mit ihrer Umgebung aus. Geschlossene Systeme tauschen nur Wärme mit ihrer Umgebung aus. Isolierte Systeme tauschen nichts mit ihrer Umgebung aus. 
+:::
+
+In vielen Fällen werden wir die Veränderung der Masse und den Transfer von Masse nicht betrachten. Das klingt jetzt eigenartig, wenn Du Dir zum Beispiel die Aufnahme von Nahrung bei Tieren vorstellst. Die Betrachtung der Massenveränderung bringt jedoch keine zusätzlichen Erkenntnisse aber verkompliziert die Mathematik.
+
+### Energietransaktionen zwischen Systemen {#sec-etrans-sys}
+
+Stell Dir vor, die Umgebung wird durch ein zweites System (p) ersetzt. Für System (s) ist es egal, ob es ein zweites System gibt oder eine Umgebung (u). Wir betrachten zuerst Systeme, weil das etwas anschaulicher ist.
+
+Stell Dir vor das System (s) verrichtet eine Arbeit $W\sub{s}$ und diese Energie wird dazu genutzt, eine Masse $m\sub{p}$ eines anderen Systems (p) zu beschleunigen. Das System (s) verrichtet diese Arbeit, indem es eine Kraft $F\sub{s}$ über eine Strecke $\Delta s\sub{s}$ anwendet. Diese Arbeit von (s) ist also
+
+$$
+W\sub{s} = -F\sub{s} \cdot \Delta s\sub{s} < 0.
+$$
+
+Das System (s) verliert die Energie $W\sub{s}$; also ist der Betrag von $W\sub{s}$ negativ. Dadurch wird die kinetische Energie des Systems (p) um $E\sub{kin}$ gesteigert und es gilt
+
+$$
+E\sub{kin,p} > 0.
+$$
+
+Die Energieerhaltung sagt, dass das System (p) nur soviel Energie bekommen kann wie System (s) leistet. Mehr geht nicht! Wenn Du das Universum bist, dann ist aus Deiner allwissenden Sicht folgendes passiert
+
+$$
+W\sub{s} + E\sub{kin,p} = 0.
+$$
+
+Das bedeutet, dass Du als Universum diese zwei Energien als entgegengesetzt wahrnimmst. Das ist klar: wenn die Energie von (s) in eine Richtung will, muss die Energie von (p) in die entgegengesetzte. Das ist eine Folge der Energieerhaltung.
+
+Dasselbe gilt bei der Wärmeenergie. Wenn das System (s) Wärmeenergie an einem System (p) verliert, dann kühlt es ab und $\Delta T\sub{s} < 0$. Das bedeutet aber auch
+
+$$
+Q\sub{s} = C_{p,\textrm{s}} \cdot \Delta T\sub{s} < 0.
+$$
+
+Das zweite System (p) nimmt diese Wärmeenergie auf und dessen Temperatur steigt um $\Delta T\sub{p} > 0$. Dann gilt für System (p)
+
+$$
+Q\sub{p} = C_{p,\textrm{p}} \cdot \Delta T\sub{p} > 0.
+$$
+
+Aus der Sicht des Universums gilt
+
+$$
+Q\sub{s} + Q\sub{p} = 0,
+$$
+
+dass damit die Energieerhaltung erfült.
+
+Wenn Du Energietransaktionen zwischen Systeme betrachtest, dann gilt immer die Energieerhaltung. Selbst wenn Du 100 und mehr verschiedene Systeme betrachtest, die miteinander in Verbindung stehen, für die Verwänderung der mechanische Arbeit gilt
+
+$$
+W_1 + W_2 + \ldots + W_{99} + W_{100} = 0
+$$
+
+und für die Veränderung der Wärmeenergie
+
+$$
+Q_1 + Q_2 + \ldots + Q_{99} + Q_{100} = 0.
+$$
+
+### Energietransaktionen mit der Umgebung
+
+Betrachte dieselben Beispiele wie in @sec-etrans-sys. Wenn das System (s) Arbeit leistet, dann ist es schwer, sich vorzustellen wie (s) die Umgebung (u) anschiebt. Die Umgebung ist nicht greifbar. Trotzdem können wir schreiben
+
+$$
+W\sub{s} + E\sub{u} = 0.
+$$
+
+Ebenso verhält es sich mit der Wärmeenergieänderung. Die Umgebung (u) könnte zum Beispiel auch das gesamte Universum darstellen. Aber dessen Wärmekapazität könnte sehr groß sein und dadurch wäre ein Aufspalten der Wärmeenergieänderung in Wärmekapazität und Temperaturänderung unsinnig. Trotzdem können wir auch hier schreiben
+
+$$
+Q\sub{s} + Q\sub{u} = 0.
+$$
+
+Das bedeutet, dass die Umgebung für uns eher als Platzhalter für alle Arten von Systemen steht. Es ist ein nicht greifbares abstraktes Reservoir, dass mit dem betrachteten System Energie austauscht. Wie die übertragene Energie genutzt wird, entscheidet die Form des Systems, dass für die Umgebing steht.
+
+### Reale Energietransaktionen
+
+In der Realität geht immer ein Teil der übertragenen Energie als Wärme verloren. Wenn vom System (s) mechanische Energie zu System (p) fliesst, dann gilt
+
+$$
+W\sub{s} + W\sub{p} + Q\sub{u} = 0.
+$$
+
+Für Wärmeenergieveränderungen gilt dasselbe:
+
+$$
+Q\sub{s} + Q\sub{p} + Q\sub{u} = 0.
+$$
+
+Nicht mal Wärme geht verlustfrei von einem System in das nächste. Eigentlich lässt sich das auf jegliche Energieänderungen ausdehnen
+
+$$
+\Delta E\sub{s} + \Delta E\sub{p} + Q\sub{u} = 0.
+$$
+
+Diese Aussage ist universell und gilt nach allen Beobachtungen im gesamten Universum. Es ist nichts anderes als eine Form der Energieerhaltung.
+
+## Innere Energie
+
+In offenen Systemen können Wärmeenergie und Arbeit aus dem System in die Umgebung oder anderen Systemen und umgekehrt fließen. Woher kommt aber diese Energie und wo wird sie innerhalb des Systems gespeichert?
+
+### Ein Energiepuffer im Inneren {#sec-energy-buffer}
+
+Wenn wir Wärmeenergie in ein System hineinleiten, dann wissen wir, dass sie zu einer Erwärmung des Systems führt. Wir wissen auch, dass die Teilchen des Systems durch die Temperaturzunahme sich entweder schneller bewegen oder schneller schwingen. Wenn Wärmeenergie aus dem System entfernt wird, dann kühlt das System ab. Dadurch verlangsamen die Teilchen des Systems oder schwingen langsamer. Damit ist klar; wir haben die Bewegungsenergie der Systemteilchen wie ein Puffer für die Wärmeenergie benutzt.
+
+Jetzt betrachten wir die Volumenarbeit. Wenn ein Gas expandiert und Wärmeenergie nicht in das System fließen kann, dann kühlt es herunter. Das ist ein klares Zeichen, daß die Volumenarbeit aus der Bewegungsenergie der Teilchen stammt. Umgekehrt verhält es sich, wenn ein Gas komprimiert wird: es wird wärmer. Die Volumenarbeit wird in Wärmeenergie umgewandelt und schließlich in die Bewegungsenergie der Systemteilchen umgewandelt.
+
+### Definition
+
+Arbeit und Wärme, die durch die Systemgrenzen nach außen oder innen gelangen, speisen sich entweder aus dem Inneren oder werden im Inneren gespeichert. Wenn das so ist, können wir diese Eigenschaft als **innere Energie** $U$ bezeichnen. Diese ist definiert als
+
+$$
+\Delta U = Q + W.
+$$ {#eq-u}
+
+Das heißt, dass die innere Energie einen Speicher für Energie darstellt, der nur durch Wärme oder Arbeit geändert werden kann. Die Arbeit kann dabei von verschiedenen Systemen geleistet werden. 
+
+Die innere Energie ist ein Ausdruck für die **Energierhaltung**. Energie, in welcher Form auch immer sie durch die Systemgrenzen hindurchgeht, verschwindet weder im Inneren, noch wird sie im Inneren erschaffen, wenn sie heraus kommt. Diese Überlegung führt jetzt zum ersten Hauptsatz der Thermodynamik.
+
+### Isolierte Systeme
+
+Isolierte Systeme sind quasi von der Umgebung abgeschnitten. Es findet weder ein Wärmeübergang statt noch kann Arbeit verrichtet werden oder das System einer Arbeit unterworfen werden. Wenn also $Q = 0$ und $W = 0$, dann wird aus @eq-u
+
+$$
+\Delta U = 0
+$$
+
+Daraus folgt unmittelbar der **erste Hauptsatz der Thermodynamik**: **Die innere Energie eines isolierten Systems ist konstant**. Mit anderen Worten ausgedrückt: **Es gibt kein Perpetuum mobile**.^[Ein *Perpetuum Mobile* ist eine Maschine, die ewig in Bewegung bleibt. Dabei verbraucht das System aber keine der bekannten Formen von Energie]. 
+
+Besonders die zweite Auslegung des Hauptsatzes ist interessant, weil es schon etliche Versuche gab, das besagte Perpetuum Mobile zu bauen. Jedoch war bis jetzt kein Versuch erfolgreich. Selbst ausgefallene molekulare Maschinen haben den Test nie bestanden.
+
+### Geschlossene Systeme
+
+Ein geschlossenes System kann keine Volumenarbeit tätigen noch einer Arbeit unterworfen werden da $\Delta V = 0$. Der Austausch von Wärme kann jedoch stattfinden. @eq-u wird bei $W = 0$ zu
+
+$$
+\Delta U = Q.
+$$
+
+In geschlossenen Systemen kann also die innere Energie nur durch Wärme verändert werden. Diese Veränderung der Wärmenergie ist anders als viele Phänomene im Alltagsleben. Die Wärmeenergie in geschlossenen Systemen wird mithilfe der Wärmekapazität bei konstantem Volumen $C_V$ berechnet. Das heisst 
+
+$$
+Q = C_V \Delta T
+$$
+
+aber das brauchst Du Dir nur am Rande zu merken. Diese Wärmekapazität hat diesselben Einheiten die $C_p$, nämlich $\jouleperkilogramperkelvin$ und $\joulepermoleperkelvin$.
+
+### Innere Energie als Zustandsfunktion
+
+Zuerst wollen wir festhalten, dass die innere Energie eine **Zustandsfunktion** ist. Eine Zustandsfunktion ist dann in den Naturwissenschften anwendbar, wenn es keine Vorgeschichte zum betrachteten Zustand gibt.
+
+Eine Zustandfunktion erlaubt es einen Unterschied zwischen initialem und finalem Punkt zu berechnen nach
+
+$$
+\Delta U = U\sub{f} - U\sub{i}.
+$$
+
+Dabei interessieren uns wirklich nur die Werte $U\sub{i}$ und $U\sub{f}$ und nicht der Weg, der von $U\sub{i}$ nach $U\sub{f}$ führt. Mit anderen Worten, die Vorgeschichte, die zu $U\sub{f}$ führte spielt für diesen finalen Zustand keine Rolle. Die innere Energie verhält sich tatsächlich wie die potenzielle Energie auf der Erde. 
+
