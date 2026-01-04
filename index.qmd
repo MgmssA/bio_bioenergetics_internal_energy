@@ -138,6 +138,8 @@ In vielen Fällen werden wir die Veränderung der Masse und den Transfer von Mas
 
 Stell Dir vor, die Umgebung wird durch ein zweites System (p) ersetzt. Für System (s) ist es egal, ob es ein zweites System gibt oder eine Umgebung (u). Wir betrachten zuerst Systeme, weil das etwas anschaulicher ist.
 
+#### Mechanische Energie
+
 Stell Dir vor das System (s) verrichtet eine Arbeit $W\sub{s}$ und diese Energie wird dazu genutzt, eine Masse $m\sub{p}$ eines anderen Systems (p) zu beschleunigen. Das System (s) verrichtet diese Arbeit, indem es eine Kraft $F\sub{s}$ über eine Strecke $\Delta s\sub{s}$ anwendet. Diese Arbeit von (s) ist also
 
 $$
@@ -157,6 +159,8 @@ W\sub{s} + W\sub{p} = 0.
 $$
 
 Das bedeutet, dass Du als Universum diese zwei Energien als entgegengesetzt wahrnimmst. Das ist klar: wenn die Energie von (s) in eine Richtung will, muss die Energie von (p) in die entgegengesetzte. Das ist eine Folge der Energieerhaltung.
+
+#### Wärmeenergie
 
 Dasselbe gilt bei der Wärmeenergie. Wenn das System (s) Wärmeenergie an einem System (p) verliert, dann kühlt es ab und $\Delta T\sub{s} < 0$. Das bedeutet aber auch
 
@@ -178,6 +182,8 @@ $$
 
 dass damit die Energieerhaltung erfült.
 
+#### Kette von Systemen
+
 Wenn Du Energietransaktionen zwischen Systeme betrachtest, dann gilt immer die Energieerhaltung. Selbst wenn Du 100 und mehr verschiedene Systeme betrachtest, die miteinander in Verbindung stehen, für die Verwänderung der mechanische Arbeit gilt
 
 $$
@@ -189,6 +195,15 @@ und für die Veränderung der Wärmeenergie
 $$
 Q_1 + Q_2 + \ldots + Q_{99} + Q_{100} = 0.
 $$
+
+
+Wenn Arbeit und Wärmeenergie ausgetauscht wird, dann wird einfach alles zusammengezählt. Stell Dir vor System 1 produziert Arbeit und dabei verliert es etwas Wärme. Die Arbeit wird von System 2 ebenfalls zu einer Arbeit umgesetzt aber System 2 verliert dabei ebenfalls Wärme. Jetzt betrachten wir diese Kette aus der Sicht des Universums. Wegen der Energieerhaltung gilt
+
+$$
+W_1 + Q_1 + W_2 + Q_2 = 0
+$$
+
+Aus Sicht des Systeme wird $W_1 < 0$ und $W_2 < 0$, da die Arbeit letztendlich in die Umgebung abgegeben wird. Die Wärme wird ebenfalls nach aussen abgegeben, sodass $Q_1 < 0$ und $Q_2 < 0$.
 
 ### Energietransaktionen mit der Umgebung
 
@@ -204,7 +219,7 @@ $$
 Q\sub{s} + Q\sub{u} = 0.
 $$
 
-Das bedeutet, dass die Umgebung für uns eher als Platzhalter für alle Arten von Systemen steht. Es ist ein nicht greifbares abstraktes Reservoir, dass mit dem betrachteten System Energie austauscht. Wie die übertragene Energie genutzt wird, entscheidet die Form des Systems, dass für die Umgebing steht.
+Das bedeutet, dass die Umgebung für uns eher als Platzhalter für alle Arten von Systemen steht. Es ist ein nicht greifbares abstraktes Reservoir, dass mit dem betrachteten System Energie austauscht. Wie die übertragene Energie genutzt wird, entscheidet die Form des Systems, dass für die Umgebung steht.
 
 ### Reale Energietransaktionen
 
