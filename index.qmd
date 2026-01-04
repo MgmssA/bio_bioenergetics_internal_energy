@@ -291,7 +291,7 @@ $$
 Q = C_V \Delta T
 $$
 
-aber das brauchst Du Dir nur am Rande zu merken. Diese Wärmekapazität hat diesselben Einheiten die $C_p$, nämlich $\jouleperkilogramperkelvin$ und $\joulepermoleperkelvin$.
+aber das brauchst Du Dir nur am Rande zu merken. Diese Wärmekapazität hat diesselben Einheiten wie $C_p$, nämlich $\jouleperkilogramperkelvin$ und $\joulepermoleperkelvin$.
 
 ### Innere Energie als Zustandsfunktion
 
@@ -300,8 +300,8 @@ Zuerst wollen wir festhalten, dass die innere Energie eine **Zustandsfunktion** 
 Eine Zustandfunktion erlaubt es einen Unterschied zwischen initialem und finalem Punkt zu berechnen nach
 
 $$
-\Delta U = U\sub{f} - U\sub{i}.
+\Delta U = U\sub{Ende} - U\sub{Anfang}.
 $$
 
-Dabei interessieren uns wirklich nur die Werte $U\sub{i}$ und $U\sub{f}$ und nicht der Weg, der von $U\sub{i}$ nach $U\sub{f}$ führt. Mit anderen Worten, die Vorgeschichte, die zu $U\sub{f}$ führte spielt für diesen finalen Zustand keine Rolle. Die innere Energie verhält sich tatsächlich wie die potenzielle Energie auf der Erde. 
+Dabei interessieren uns wirklich nur die Werte $U\sub{Anfang}$ und $U\sub{Ende}$ und nicht der Weg, der von $U\sub{Anfang}$ nach $U\sub{Ende}$ führt. Mit anderen Worten, die Vorgeschichte, die zu $U\sub{Ende}$ führte spielt für diesen finalen Zustand keine Rolle. Die innere Energie verhält sich tatsächlich wie die potenzielle Energie auf der Erde. 
 
