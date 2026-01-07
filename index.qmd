@@ -21,7 +21,7 @@ Die mechanische Arbeit wird genutzt, um etwas zu beschleunigen, abzubremsen, zu 
 Wichtig für die Berechnung der mechanischen Arbeit $W$ ist die Definition der Arbeit:
 
 $$ 
-W = -F \delta s.
+W = -F \Delta s.
 $$
 
 mit $F$ stehend für die wirkende Kraft und $\Delta s$ die Wegstrecke über der die Kraft wirkt.
