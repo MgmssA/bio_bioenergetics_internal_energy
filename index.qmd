@@ -261,7 +261,15 @@ $$
 \Delta U = Q + W.
 $$ {#eq-u}
 
-Das heißt, dass die innere Energie einen Speicher für Energie darstellt, der nur durch Wärme oder Arbeit geändert werden kann. Die Arbeit kann dabei von verschiedenen Systemen geleistet werden. 
+Das heißt, dass die innere Energie einen Speicher für Energie darstellt, der nur durch Wärme oder Arbeit geändert werden kann. Die Arbeit kann dabei von verschiedenen Systemen geleistet werden.
+
+::: {.callout-important collapse="false"}
+
+## Achtung
+
+Der absolute Wert der inneren Energie lässt sich nicht bestimmen, sondern nur deren Änderung. Um den absoluten Wert zu bestimmen, müssten alle Beiträge zur inneren Energie bestimmt werden. Das ist in vielen Fällen unmöglich und selten notwendig.
+
+:::
 
 Die innere Energie ist ein Ausdruck für die **Energierhaltung**. Energie, in welcher Form auch immer sie durch die Systemgrenzen hindurchgeht, verschwindet weder im Inneren, noch wird sie im Inneren erschaffen, wenn sie heraus kommt. Diese Überlegung führt jetzt zum ersten Hauptsatz der Thermodynamik.
 
