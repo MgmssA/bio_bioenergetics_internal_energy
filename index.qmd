@@ -180,11 +180,11 @@ $$
 Q\sub{s} + Q\sub{p} = 0,
 $$
 
-dass damit die Energieerhaltung erfült.
+dass damit die Energieerhaltung erfüllt.
 
 #### Kette von Systemen
 
-Wenn Du Energietransaktionen zwischen Systeme betrachtest, dann gilt immer die Energieerhaltung. Selbst wenn Du 100 und mehr verschiedene Systeme betrachtest, die miteinander in Verbindung stehen, für die Verwänderung der mechanische Arbeit gilt
+Wenn Du Energietransaktionen zwischen Systeme betrachtest, dann gilt immer die Energieerhaltung. Selbst wenn Du 100 und mehr verschiedene Systeme betrachtest, die miteinander in Verbindung stehen, für die Verwendung der mechanische Arbeit gilt
 
 $$
 W_1 + W_2 + \ldots + W_{99} + W_{100} = 0
@@ -251,7 +251,7 @@ In offenen Systemen können Wärmeenergie und Arbeit aus dem System in die Umgeb
 
 Wenn wir Wärmeenergie in ein System hineinleiten, dann wissen wir, dass sie zu einer Erwärmung des Systems führt. Wir wissen auch, dass die Teilchen des Systems durch die Temperaturzunahme sich entweder schneller bewegen oder schneller schwingen. Wenn Wärmeenergie aus dem System entfernt wird, dann kühlt das System ab. Dadurch verlangsamen die Teilchen des Systems oder schwingen langsamer. Damit ist klar; wir haben die Bewegungsenergie der Systemteilchen wie ein Puffer für die Wärmeenergie benutzt.
 
-Jetzt betrachten wir die Volumenarbeit. Wenn ein Gas expandiert und Wärmeenergie nicht in das System fließen kann, dann kühlt es herunter. Das ist ein klares Zeichen, daß die Volumenarbeit aus der Bewegungsenergie der Teilchen stammt. Umgekehrt verhält es sich, wenn ein Gas komprimiert wird: es wird wärmer. Die Volumenarbeit wird in Wärmeenergie umgewandelt und schließlich in die Bewegungsenergie der Systemteilchen umgewandelt.
+Jetzt betrachten wir die Volumenarbeit. Wenn ein Gas expandiert und Wärmeenergie nicht in das System fließen kann, dann kühlt es herunter. Das ist ein klares Zeichen, dass die Volumenarbeit aus der Bewegungsenergie der Teilchen stammt. Umgekehrt verhält es sich, wenn ein Gas komprimiert wird: es wird wärmer. Die Volumenarbeit wird in Wärmeenergie umgewandelt und schließlich in die Bewegungsenergie der Systemteilchen umgewandelt.
 
 ### Definition
 
@@ -271,7 +271,7 @@ Der absolute Wert der inneren Energie lässt sich nicht bestimmen, sondern nur d
 
 :::
 
-Die innere Energie ist ein Ausdruck für die **Energierhaltung**. Energie, in welcher Form auch immer sie durch die Systemgrenzen hindurchgeht, verschwindet weder im Inneren, noch wird sie im Inneren erschaffen, wenn sie heraus kommt. Diese Überlegung führt jetzt zum ersten Hauptsatz der Thermodynamik.
+Die innere Energie ist ein Ausdruck für die **Energieerhaltung**. Energie, in welcher Form auch immer sie durch die Systemgrenzen hindurchgeht, verschwindet weder im Inneren, noch wird sie im Inneren erschaffen, wenn sie heraus kommt. Diese Überlegung führt jetzt zum ersten Hauptsatz der Thermodynamik.
 
 ### Isolierte Systeme
 
@@ -299,13 +299,13 @@ $$
 Q = C_V \Delta T
 $$
 
-aber das brauchst Du Dir nur am Rande zu merken. Diese Wärmekapazität hat diesselben Einheiten wie $C_p$, nämlich $\jouleperkilogramperkelvin$ und $\joulepermoleperkelvin$.
+aber das brauchst Du Dir nur am Rande zu merken. Diese Wärmekapazität hat dieselben Einheiten wie $C_p$, nämlich $\jouleperkilogramperkelvin$ und $\joulepermoleperkelvin$.
 
 ### Innere Energie als Zustandsfunktion
 
-Zuerst wollen wir festhalten, dass die innere Energie eine **Zustandsfunktion** ist. Eine Zustandsfunktion ist dann in den Naturwissenschften anwendbar, wenn es keine Vorgeschichte zum betrachteten Zustand gibt.
+Zuerst wollen wir festhalten, dass die innere Energie eine **Zustandsfunktion** ist. Eine Zustandsfunktion ist dann in den Naturwissenschaften anwendbar, wenn es keine Vorgeschichte zum betrachteten Zustand gibt.
 
-Eine Zustandfunktion erlaubt es einen Unterschied zwischen initialem und finalem Punkt zu berechnen nach
+Eine Zustandsfunktion erlaubt es einen Unterschied zwischen initialem und finalem Punkt zu berechnen nach
 
 $$
 \Delta U = U\sub{Ende} - U\sub{Anfang}.
