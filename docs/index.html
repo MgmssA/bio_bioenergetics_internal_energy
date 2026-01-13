@@ -8,7 +8,7 @@
 
 <meta name="author" content="Călin Aurel Drăgan">
 
-<title>quarto-inputc9ab01aebd30221a</title>
+<title>quarto-input2f53d92e635cdfbf</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -307,17 +307,17 @@ Q = C_{p} \Delta T.
 
     subgraph closed [Geschlossen]
         heatsys["$$\textcolor{#477A43}{Q_{\mathrm{s}}}$$"]:::text
-        worksys["$$\textcolor{#D44D39}{W_{\mathrm{s}}}$$"]:::text
+        worksys["$$\textcolor{#477A43}{W_{\mathrm{s}}}$$"]:::text
         masssys["$$\textcolor{#D44D39}{m_{\mathrm{s}}}$$"]:::text
     end
     heatsur["$$\textcolor{#477A43}{Q_{\mathrm{u}}}$$"]:::text
-    worksur["$$\textcolor{#D44D39}{W_{\mathrm{u}}}$$"]:::text
+    worksur["$$\textcolor{#477A43}{W_{\mathrm{u}}}$$"]:::text
     masssur["$$\textcolor{#D44D39}{m_{\mathrm{u}}}$$"]:::text
     heatsys &lt;--&gt; heatsur
-    worksys x--x worksur
+    worksys &lt;--&gt; worksur
     masssys x--x masssur
-    linkStyle 0 stroke:#477A43
-    linkStyle 1,2 stroke:#D44D39
+    linkStyle 0,1 stroke:#477A43
+    linkStyle 2 stroke:#D44D39
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -359,7 +359,7 @@ Q = C_{p} \Delta T.
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-three-systems-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: In der Thermodynamik tauschen Systeme (s) mit ihrer Umgebung (u) lediglich drei Sachen aus: Wärme <span class="math inline">Q</span>, Arbeit <span class="math inline">W</span> und Masse <span class="math inline">m</span>. Aber das geschieht nicht zu gleichen Teilen. Offene Systeme tauschen Wärme, Arbeit und Masse mit ihrer Umgebung aus. Geschlossene Systeme tauschen nur Wärme mit ihrer Umgebung aus. Isolierte Systeme tauschen nichts mit ihrer Umgebung aus.
+Abbildung&nbsp;1: In der Thermodynamik tauschen Systeme (s) mit ihrer Umgebung (u) lediglich drei Sachen aus: Wärme <span class="math inline">Q</span>, Arbeit <span class="math inline">W</span> und Masse <span class="math inline">m</span>. Aber das geschieht nicht zu gleichen Teilen. Offene Systeme tauschen Wärme, Arbeit und Masse mit ihrer Umgebung aus. Geschlossene Systeme tauschen Wärme und Arbeit aber keine Masse aus. Isolierte Systeme tauschen nichts mit ihrer Umgebung aus.
 </figcaption>
 </figure>
 </div>
@@ -367,42 +367,42 @@ Abbildung&nbsp;1: In der Thermodynamik tauschen Systeme (s) mit ihrer Umgebung (
 </section>
 <section id="sec-etrans-sys" class="level3" data-number="2.2">
 <h3 data-number="2.2" class="anchored" data-anchor-id="sec-etrans-sys"><span class="header-section-number">2.2</span> Energietransaktionen zwischen Systemen</h3>
-<p>Stell Dir vor, die Umgebung wird durch ein zweites System (p) ersetzt. Für System (s) ist es egal, ob es ein zweites System gibt oder eine Umgebung (u). Wir betrachten zuerst Systeme, weil das etwas anschaulicher ist.</p>
+<p>Stell Dir vor, die Umgebung wird durch ein zweites System (r) ersetzt. Für System (s) ist es egal, ob es ein zweites System gibt oder eine Umgebung (u). Wir betrachten zuerst Systeme, weil das etwas anschaulicher ist.</p>
 <section id="mechanische-energie" class="level4" data-number="2.2.1">
 <h4 data-number="2.2.1" class="anchored" data-anchor-id="mechanische-energie"><span class="header-section-number">2.2.1</span> Mechanische Energie</h4>
-<p>Stell Dir vor das System (s) verrichtet eine Arbeit <span class="math inline">W\sub{s}</span> und diese Energie wird dazu genutzt, eine Masse <span class="math inline">m\sub{p}</span> eines anderen Systems (p) zu beschleunigen. Das System (s) verrichtet diese Arbeit, indem es eine Kraft <span class="math inline">F\sub{s}</span> über eine Strecke <span class="math inline">\Delta s\sub{s}</span> anwendet. Diese Arbeit von (s) ist also</p>
+<p>Stell Dir vor das System (s) verrichtet eine Arbeit <span class="math inline">W\sub{s}</span> und diese Energie wird dazu genutzt, eine Masse <span class="math inline">m\sub{r}</span> eines anderen Systems (r) zu beschleunigen. Das System (s) verrichtet diese Arbeit, indem es eine Kraft <span class="math inline">F\sub{s}</span> über eine Strecke <span class="math inline">\Delta s\sub{s}</span> anwendet. Diese Arbeit von (s) ist also</p>
 <p><span class="math display">
 W\sub{s} = -F\sub{s} \cdot \Delta s\sub{s} &lt; 0.
 </span></p>
-<p>Das System (s) verliert die Energie <span class="math inline">W\sub{s}</span>; also ist der Betrag von <span class="math inline">W\sub{s}</span> negativ. Diese Energie wird nun in System (p) hineingesteckt und dadurch wird es beschleunigt. Das System (p) erfährt dabei eine Kraft <span class="math inline">F</span>, die in die entgegengesetzte Richtung zeigt. Dadurch ist</p>
+<p>Das System (s) verliert die Energie <span class="math inline">W\sub{s}</span>, die somit negativ ist. Diese Energie wird nun in das System (r) hineingesteckt und dadurch wird es beschleunigt. Das System (r) erfährt dabei eine Kraft <span class="math inline">F\sub{r}</span>, die in die entgegengesetzte Richtung zeigt. Dadurch ist</p>
 <p><span class="math display">
-W\sub{s} = -(-F\sub{s}) \cdot \Delta s\sub{s} &gt; 0.
+W\sub{r} = -(-F\sub{s}) \cdot \Delta s\sub{s} = -W\sub{s} &gt; 0.
 </span></p>
-<p>Die Energieerhaltung sagt, dass das System (p) nur soviel Energie bekommen kann wie System (s) leistet. Mehr geht nicht! Wenn Du das Universum bist, dann ist aus Deiner allwissenden Sicht folgendes passiert</p>
+<p>Die Energieerhaltung sagt, dass das System (r) nur soviel Energie bekommen kann wie System (s) leistet. Mehr geht nicht! Wenn Du das Universum bist, dann ist aus Deiner allwissenden Sicht folgendes passiert</p>
 <p><span class="math display">
-W\sub{s} + W\sub{p} = 0.
+W\sub{s} + W\sub{r} = 0.
 </span></p>
-<p>Das bedeutet, dass Du als Universum diese zwei Energien als entgegengesetzt wahrnimmst. Das ist klar: wenn die Energie von (s) in eine Richtung will, muss die Energie von (p) in die entgegengesetzte. Das ist eine Folge der Energieerhaltung.</p>
+<p>Das bedeutet, dass Du als Universum diese zwei Energien als entgegengesetzt wahrnimmst. Das ist klar: wenn die Energie von (s) in eine Richtung will, muss die Energie von (r) in die entgegengesetzte. Das ist eine Folge der Energieerhaltung.</p>
 </section>
 <section id="wärmeenergie" class="level4" data-number="2.2.2">
 <h4 data-number="2.2.2" class="anchored" data-anchor-id="wärmeenergie"><span class="header-section-number">2.2.2</span> Wärmeenergie</h4>
-<p>Dasselbe gilt bei der Wärmeenergie. Wenn das System (s) Wärmeenergie an einem System (p) verliert, dann kühlt es ab und <span class="math inline">\Delta T\sub{s} &lt; 0</span>. Das bedeutet aber auch</p>
+<p>Dasselbe gilt bei der Wärmeenergie. Wenn das System (s) Wärmeenergie an einem System (r) verliert, dann kühlt es ab und <span class="math inline">\Delta T\sub{s} &lt; 0</span>. Das bedeutet aber auch</p>
 <p><span class="math display">
 Q\sub{s} = C_{p,\textrm{s}} \cdot \Delta T\sub{s} &lt; 0.
 </span></p>
-<p>Das zweite System (p) nimmt diese Wärmeenergie auf und dessen Temperatur steigt um <span class="math inline">\Delta T\sub{p} &gt; 0</span>. Dann gilt für System (p)</p>
+<p>Das zweite System (r) nimmt diese Wärmeenergie auf und dessen Temperatur steigt um <span class="math inline">\Delta T\sub{r} &gt; 0</span>. Dann gilt für System (r)</p>
 <p><span class="math display">
-Q\sub{p} = C_{p,\textrm{p}} \cdot \Delta T\sub{p} &gt; 0.
+Q\sub{r} = C_{p,\textrm{r}} \cdot \Delta T\sub{r} &gt; 0.
 </span></p>
 <p>Aus der Sicht des Universums gilt</p>
 <p><span class="math display">
-Q\sub{s} + Q\sub{p} = 0,
+Q\sub{s} + Q\sub{r} = 0,
 </span></p>
-<p>dass damit die Energieerhaltung erfült.</p>
+<p>dass damit die Energieerhaltung erfüllt.</p>
 </section>
 <section id="kette-von-systemen" class="level4" data-number="2.2.3">
 <h4 data-number="2.2.3" class="anchored" data-anchor-id="kette-von-systemen"><span class="header-section-number">2.2.3</span> Kette von Systemen</h4>
-<p>Wenn Du Energietransaktionen zwischen Systeme betrachtest, dann gilt immer die Energieerhaltung. Selbst wenn Du 100 und mehr verschiedene Systeme betrachtest, die miteinander in Verbindung stehen, für die Verwänderung der mechanische Arbeit gilt</p>
+<p>Wenn Du Energietransaktionen zwischen Systeme betrachtest, dann gilt immer die Energieerhaltung. Selbst wenn Du 100 und mehr verschiedene Systeme betrachtest, die miteinander in Verbindung stehen, für die Verwendung der mechanische Arbeit gilt</p>
 <p><span class="math display">
 W_1 + W_2 + \ldots + W_{99} + W_{100} = 0
 </span></p>
@@ -431,17 +431,17 @@ Q\sub{s} + Q\sub{u} = 0.
 </section>
 <section id="reale-energietransaktionen" class="level3" data-number="2.4">
 <h3 data-number="2.4" class="anchored" data-anchor-id="reale-energietransaktionen"><span class="header-section-number">2.4</span> Reale Energietransaktionen</h3>
-<p>In der Realität geht immer ein Teil der übertragenen Energie als Wärme verloren. Wenn vom System (s) mechanische Energie zu System (p) fliesst, dann gilt</p>
+<p>In der Realität geht immer ein Teil der übertragenen Energie als Wärme <em>verloren</em>. Verloren gehen heisst hier, dass diese fein verteilte Energie nicht mehr gut in einer nutzbaren Form gebracht werden kann. Wenn vom System (s) mechanische Energie zu System (r) fliesst, dann gilt</p>
 <p><span class="math display">
-W\sub{s} + W\sub{p} + Q\sub{u} = 0.
+W\sub{s} + W\sub{r} + Q\sub{u} = 0.
 </span></p>
 <p>Für Wärmeenergieveränderungen gilt dasselbe:</p>
 <p><span class="math display">
-Q\sub{s} + Q\sub{p} + Q\sub{u} = 0.
+Q\sub{s} + Q\sub{r} + Q\sub{u} = 0.
 </span></p>
 <p>Nicht mal Wärme geht verlustfrei von einem System in das nächste. Eigentlich lässt sich das auf jegliche Energieänderungen ausdehnen</p>
 <p><span class="math display">
-\Delta E\sub{s} + \Delta E\sub{p} + Q\sub{u} = 0.
+\Delta E\sub{s} + \Delta E\sub{r} + Q\sub{u} = 0.
 </span></p>
 <p>Diese Aussage ist universell und gilt nach allen Beobachtungen im gesamten Universum. Es ist nichts anderes als eine Form der Energieerhaltung.</p>
 </section>
@@ -452,7 +452,7 @@ Q\sub{s} + Q\sub{p} + Q\sub{u} = 0.
 <section id="sec-energy-buffer" class="level3" data-number="3.1">
 <h3 data-number="3.1" class="anchored" data-anchor-id="sec-energy-buffer"><span class="header-section-number">3.1</span> Ein Energiepuffer im Inneren</h3>
 <p>Wenn wir Wärmeenergie in ein System hineinleiten, dann wissen wir, dass sie zu einer Erwärmung des Systems führt. Wir wissen auch, dass die Teilchen des Systems durch die Temperaturzunahme sich entweder schneller bewegen oder schneller schwingen. Wenn Wärmeenergie aus dem System entfernt wird, dann kühlt das System ab. Dadurch verlangsamen die Teilchen des Systems oder schwingen langsamer. Damit ist klar; wir haben die Bewegungsenergie der Systemteilchen wie ein Puffer für die Wärmeenergie benutzt.</p>
-<p>Jetzt betrachten wir die Volumenarbeit. Wenn ein Gas expandiert und Wärmeenergie nicht in das System fließen kann, dann kühlt es herunter. Das ist ein klares Zeichen, daß die Volumenarbeit aus der Bewegungsenergie der Teilchen stammt. Umgekehrt verhält es sich, wenn ein Gas komprimiert wird: es wird wärmer. Die Volumenarbeit wird in Wärmeenergie umgewandelt und schließlich in die Bewegungsenergie der Systemteilchen umgewandelt.</p>
+<p>Jetzt betrachten wir die Volumenarbeit. Wenn ein Gas expandiert und Wärmeenergie nicht in das System fließen kann, dann kühlt es herunter. Das ist ein klares Zeichen, dass die Volumenarbeit aus der Bewegungsenergie der Teilchen stammt. Umgekehrt verhält es sich, wenn ein Gas komprimiert wird: es wird wärmer. Die Volumenarbeit wird in Wärmeenergie umgewandelt und schließlich in die Bewegungsenergie der Systemteilchen umgewandelt.</p>
 </section>
 <section id="definition" class="level3" data-number="3.2">
 <h3 data-number="3.2" class="anchored" data-anchor-id="definition"><span class="header-section-number">3.2</span> Definition</h3>
@@ -460,7 +460,7 @@ Q\sub{s} + Q\sub{p} + Q\sub{u} = 0.
 <p><span id="eq-u"><span class="math display">
 \Delta U = Q + W.
 \tag{1}</span></span></p>
-<p>Das heißt, dass die innere Energie einen Speicher für Energie darstellt, der nur durch Wärme oder Arbeit geändert werden kann. Die Arbeit kann dabei von verschiedenen Systemen geleistet werden.</p>
+<p>Das heißt, dass die innere Energie einen Speicher für Energie darstellt, der nur durch Wärme oder Arbeit geändert werden kann. Die Arbeit kann dabei von verschiedenen Systemen geleistet werden. Wenn das Vorzeichen von <span class="math inline">Q</span> und <span class="math inline">W</span> negativ ist, dann geht diese Energieformen dem betrachteten System verloren. Wenn sie positiv sind, dann gewiint das System diese Energieformen. Weitere Details dazu gibt es in den Lerninhalten “Arbeit und Wärme”.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -477,7 +477,7 @@ Q\sub{s} + Q\sub{p} + Q\sub{u} = 0.
 </div>
 </div>
 </div>
-<p>Die innere Energie ist ein Ausdruck für die <strong>Energierhaltung</strong>. Energie, in welcher Form auch immer sie durch die Systemgrenzen hindurchgeht, verschwindet weder im Inneren, noch wird sie im Inneren erschaffen, wenn sie heraus kommt. Diese Überlegung führt jetzt zum ersten Hauptsatz der Thermodynamik.</p>
+<p>Die innere Energie ist ein Ausdruck für die <strong>Energieerhaltung</strong>. Energie, in welcher Form auch immer sie durch die Systemgrenzen hindurchgeht, verschwindet weder im Inneren, noch wird sie im Inneren erschaffen, wenn sie heraus kommt. Diese Überlegung führt jetzt zum ersten Hauptsatz der Thermodynamik.</p>
 </section>
 <section id="isolierte-systeme" class="level3" data-number="3.3">
 <h3 data-number="3.3" class="anchored" data-anchor-id="isolierte-systeme"><span class="header-section-number">3.3</span> Isolierte Systeme</h3>
@@ -490,20 +490,20 @@ Q\sub{s} + Q\sub{p} + Q\sub{u} = 0.
 </section>
 <section id="geschlossene-systeme" class="level3" data-number="3.4">
 <h3 data-number="3.4" class="anchored" data-anchor-id="geschlossene-systeme"><span class="header-section-number">3.4</span> Geschlossene Systeme</h3>
-<p>Ein geschlossenes System kann keine Volumenarbeit tätigen noch einer Arbeit unterworfen werden da <span class="math inline">\Delta V = 0</span>. Der Austausch von Wärme kann jedoch stattfinden. <a href="#eq-u" class="quarto-xref">Gleichung&nbsp;1</a> wird bei <span class="math inline">W = 0</span> zu</p>
+<p>Wenn ein geschlossenes System keine Volumenarbeit tätigen noch einer andere Form von Arbeit unterworfen werden kann folgt <span class="math inline">\Delta V = 0</span>. Der Austausch von Wärme kann jedoch immer noch stattfinden. <a href="#eq-u" class="quarto-xref">Gleichung&nbsp;1</a> wird bei <span class="math inline">W = 0</span> zu</p>
 <p><span class="math display">
 \Delta U = Q.
 </span></p>
-<p>In geschlossenen Systemen kann also die innere Energie nur durch Wärme verändert werden. Diese Veränderung der Wärmenergie ist anders als viele Phänomene im Alltagsleben. Die Wärmeenergie in geschlossenen Systemen wird mithilfe der Wärmekapazität bei konstantem Volumen <span class="math inline">C_V</span> berechnet. Das heisst</p>
+<p>In geschlossenen Systemen, die keine Arbeit mit der Umgebung austauschen, kann also die innere Energie nur durch Wärme verändert werden. Diese Veränderung der Wärmenergie ist anders als viele Phänomene im Alltagsleben. Die Wärmeenergie in geschlossenen Systemen wird mithilfe der Wärmekapazität bei konstantem Volumen <span class="math inline">C_V</span> berechnet. Das heisst</p>
 <p><span class="math display">
 Q = C_V \Delta T
 </span></p>
-<p>aber das brauchst Du Dir nur am Rande zu merken. Diese Wärmekapazität hat diesselben Einheiten wie <span class="math inline">C_p</span>, nämlich <span class="math inline">\jouleperkilogramperkelvin</span> und <span class="math inline">\joulepermoleperkelvin</span>.</p>
+<p>aber das brauchst Du Dir nur am Rande zu merken. Diese Wärmekapazität hat dieselben Einheiten wie <span class="math inline">C_p</span>, nämlich <span class="math inline">\jouleperkilogramperkelvin</span> und <span class="math inline">\joulepermoleperkelvin</span>.</p>
 </section>
 <section id="innere-energie-als-zustandsfunktion" class="level3" data-number="3.5">
 <h3 data-number="3.5" class="anchored" data-anchor-id="innere-energie-als-zustandsfunktion"><span class="header-section-number">3.5</span> Innere Energie als Zustandsfunktion</h3>
-<p>Zuerst wollen wir festhalten, dass die innere Energie eine <strong>Zustandsfunktion</strong> ist. Eine Zustandsfunktion ist dann in den Naturwissenschften anwendbar, wenn es keine Vorgeschichte zum betrachteten Zustand gibt.</p>
-<p>Eine Zustandfunktion erlaubt es einen Unterschied zwischen initialem und finalem Punkt zu berechnen nach</p>
+<p>Zuerst wollen wir festhalten, dass die innere Energie eine <strong>Zustandsfunktion</strong> ist. Eine Zustandsfunktion ist dann in den Naturwissenschaften anwendbar, wenn es keine Vorgeschichte zum betrachteten Zustand gibt.</p>
+<p>Eine Zustandsfunktion erlaubt es einen Unterschied zwischen initialem und finalem Punkt zu berechnen nach</p>
 <p><span class="math display">
 \Delta U = U\sub{Ende} - U\sub{Anfang}.
 </span></p>

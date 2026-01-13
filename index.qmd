@@ -91,17 +91,17 @@ flowchart LR
 
     subgraph closed [Geschlossen]
         heatsys["$$\textcolor{#477A43}{Q_{\mathrm{s}}}$$"]:::text
-        worksys["$$\textcolor{#D44D39}{W_{\mathrm{s}}}$$"]:::text
+        worksys["$$\textcolor{#477A43}{W_{\mathrm{s}}}$$"]:::text
         masssys["$$\textcolor{#D44D39}{m_{\mathrm{s}}}$$"]:::text
     end
     heatsur["$$\textcolor{#477A43}{Q_{\mathrm{u}}}$$"]:::text
-    worksur["$$\textcolor{#D44D39}{W_{\mathrm{u}}}$$"]:::text
+    worksur["$$\textcolor{#477A43}{W_{\mathrm{u}}}$$"]:::text
     masssur["$$\textcolor{#D44D39}{m_{\mathrm{u}}}$$"]:::text
     heatsys <--> heatsur
-    worksys x--x worksur
+    worksys <--> worksur
     masssys x--x masssur
-    linkStyle 0 stroke:#477A43
-    linkStyle 1,2 stroke:#D44D39
+    linkStyle 0,1 stroke:#477A43
+    linkStyle 2 stroke:#D44D39
 ```
 
 ```{mermaid}
@@ -129,55 +129,55 @@ flowchart LR
     linkStyle 0,1,2 stroke:#D44D39
 ```
 
-In der Thermodynamik tauschen Systeme (s) mit ihrer Umgebung (u) lediglich drei Sachen aus: Wärme $Q$, Arbeit $W$ und Masse $m$. Aber das geschieht nicht zu gleichen Teilen. Offene Systeme tauschen Wärme, Arbeit und Masse mit ihrer Umgebung aus. Geschlossene Systeme tauschen nur Wärme mit ihrer Umgebung aus. Isolierte Systeme tauschen nichts mit ihrer Umgebung aus. 
+In der Thermodynamik tauschen Systeme (s) mit ihrer Umgebung (u) lediglich drei Sachen aus: Wärme $Q$, Arbeit $W$ und Masse $m$. Aber das geschieht nicht zu gleichen Teilen. Offene Systeme tauschen Wärme, Arbeit und Masse mit ihrer Umgebung aus. Geschlossene Systeme tauschen Wärme und Arbeit aber keine Masse aus. Isolierte Systeme tauschen nichts mit ihrer Umgebung aus. 
 :::
 
 In vielen Fällen werden wir die Veränderung der Masse und den Transfer von Masse nicht betrachten. Das klingt jetzt eigenartig, wenn Du Dir zum Beispiel die Aufnahme von Nahrung bei Tieren vorstellst. Die Betrachtung der Massenveränderung bringt jedoch keine zusätzlichen Erkenntnisse aber verkompliziert die Mathematik.
 
 ### Energietransaktionen zwischen Systemen {#sec-etrans-sys}
 
-Stell Dir vor, die Umgebung wird durch ein zweites System (p) ersetzt. Für System (s) ist es egal, ob es ein zweites System gibt oder eine Umgebung (u). Wir betrachten zuerst Systeme, weil das etwas anschaulicher ist.
+Stell Dir vor, die Umgebung wird durch ein zweites System (r) ersetzt. Für System (s) ist es egal, ob es ein zweites System gibt oder eine Umgebung (u). Wir betrachten zuerst Systeme, weil das etwas anschaulicher ist.
 
 #### Mechanische Energie
 
-Stell Dir vor das System (s) verrichtet eine Arbeit $W\sub{s}$ und diese Energie wird dazu genutzt, eine Masse $m\sub{p}$ eines anderen Systems (p) zu beschleunigen. Das System (s) verrichtet diese Arbeit, indem es eine Kraft $F\sub{s}$ über eine Strecke $\Delta s\sub{s}$ anwendet. Diese Arbeit von (s) ist also
+Stell Dir vor das System (s) verrichtet eine Arbeit $W\sub{s}$ und diese Energie wird dazu genutzt, eine Masse $m\sub{r}$ eines anderen Systems (r) zu beschleunigen. Das System (s) verrichtet diese Arbeit, indem es eine Kraft $F\sub{s}$ über eine Strecke $\Delta s\sub{s}$ anwendet. Diese Arbeit von (s) ist also
 
 $$
 W\sub{s} = -F\sub{s} \cdot \Delta s\sub{s} < 0.
 $$
 
-Das System (s) verliert die Energie $W\sub{s}$; also ist der Betrag von $W\sub{s}$ negativ. Diese Energie wird nun in System (p) hineingesteckt und dadurch wird es beschleunigt. Das System (p) erfährt dabei eine Kraft $F$, die in die entgegengesetzte Richtung zeigt. Dadurch ist
+Das System (s) verliert die Energie $W\sub{s}$, die somit negativ ist. Diese Energie wird nun in das System (r) hineingesteckt und dadurch wird es beschleunigt. Das System (r) erfährt dabei eine Kraft $F\sub{r}$, die in die entgegengesetzte Richtung zeigt. Dadurch ist
 
 $$
-W\sub{s} = -(-F\sub{s}) \cdot \Delta s\sub{s} > 0.
+W\sub{r} = -(-F\sub{s}) \cdot \Delta s\sub{s} = -W\sub{s} > 0.
 $$
 
-Die Energieerhaltung sagt, dass das System (p) nur soviel Energie bekommen kann wie System (s) leistet. Mehr geht nicht! Wenn Du das Universum bist, dann ist aus Deiner allwissenden Sicht folgendes passiert
+Die Energieerhaltung sagt, dass das System (r) nur soviel Energie bekommen kann wie System (s) leistet. Mehr geht nicht! Wenn Du das Universum bist, dann ist aus Deiner allwissenden Sicht folgendes passiert
 
 $$
-W\sub{s} + W\sub{p} = 0.
+W\sub{s} + W\sub{r} = 0.
 $$
 
-Das bedeutet, dass Du als Universum diese zwei Energien als entgegengesetzt wahrnimmst. Das ist klar: wenn die Energie von (s) in eine Richtung will, muss die Energie von (p) in die entgegengesetzte. Das ist eine Folge der Energieerhaltung.
+Das bedeutet, dass Du als Universum diese zwei Energien als entgegengesetzt wahrnimmst. Das ist klar: wenn die Energie von (s) in eine Richtung will, muss die Energie von (r) in die entgegengesetzte. Das ist eine Folge der Energieerhaltung.
 
 #### Wärmeenergie
 
-Dasselbe gilt bei der Wärmeenergie. Wenn das System (s) Wärmeenergie an einem System (p) verliert, dann kühlt es ab und $\Delta T\sub{s} < 0$. Das bedeutet aber auch
+Dasselbe gilt bei der Wärmeenergie. Wenn das System (s) Wärmeenergie an einem System (r) verliert, dann kühlt es ab und $\Delta T\sub{s} < 0$. Das bedeutet aber auch
 
 $$
 Q\sub{s} = C_{p,\textrm{s}} \cdot \Delta T\sub{s} < 0.
 $$
 
-Das zweite System (p) nimmt diese Wärmeenergie auf und dessen Temperatur steigt um $\Delta T\sub{p} > 0$. Dann gilt für System (p)
+Das zweite System (r) nimmt diese Wärmeenergie auf und dessen Temperatur steigt um $\Delta T\sub{r} > 0$. Dann gilt für System (r)
 
 $$
-Q\sub{p} = C_{p,\textrm{p}} \cdot \Delta T\sub{p} > 0.
+Q\sub{r} = C_{p,\textrm{r}} \cdot \Delta T\sub{r} > 0.
 $$
 
 Aus der Sicht des Universums gilt
 
 $$
-Q\sub{s} + Q\sub{p} = 0,
+Q\sub{s} + Q\sub{r} = 0,
 $$
 
 dass damit die Energieerhaltung erfüllt.
@@ -223,22 +223,22 @@ Das bedeutet, dass die Umgebung für uns eher als Platzhalter für alle Arten vo
 
 ### Reale Energietransaktionen
 
-In der Realität geht immer ein Teil der übertragenen Energie als Wärme verloren. Wenn vom System (s) mechanische Energie zu System (p) fliesst, dann gilt
+In der Realität geht immer ein Teil der übertragenen Energie als Wärme *verloren*. Verloren gehen heisst hier, dass diese fein verteilte Energie nicht mehr gut in einer nutzbaren Form gebracht werden kann. Wenn vom System (s) mechanische Energie zu System (r) fliesst, dann gilt
 
 $$
-W\sub{s} + W\sub{p} + Q\sub{u} = 0.
+W\sub{s} + W\sub{r} + Q\sub{u} = 0.
 $$
 
 Für Wärmeenergieveränderungen gilt dasselbe:
 
 $$
-Q\sub{s} + Q\sub{p} + Q\sub{u} = 0.
+Q\sub{s} + Q\sub{r} + Q\sub{u} = 0.
 $$
 
 Nicht mal Wärme geht verlustfrei von einem System in das nächste. Eigentlich lässt sich das auf jegliche Energieänderungen ausdehnen
 
 $$
-\Delta E\sub{s} + \Delta E\sub{p} + Q\sub{u} = 0.
+\Delta E\sub{s} + \Delta E\sub{r} + Q\sub{u} = 0.
 $$
 
 Diese Aussage ist universell und gilt nach allen Beobachtungen im gesamten Universum. Es ist nichts anderes als eine Form der Energieerhaltung.
@@ -261,7 +261,7 @@ $$
 \Delta U = Q + W.
 $$ {#eq-u}
 
-Das heißt, dass die innere Energie einen Speicher für Energie darstellt, der nur durch Wärme oder Arbeit geändert werden kann. Die Arbeit kann dabei von verschiedenen Systemen geleistet werden.
+Das heißt, dass die innere Energie einen Speicher für Energie darstellt, der nur durch Wärme oder Arbeit geändert werden kann. Die Arbeit kann dabei von verschiedenen Systemen geleistet werden. Wenn das Vorzeichen von $Q$ und $W$ negativ ist, dann geht diese Energieformen dem betrachteten System verloren. Wenn sie positiv sind, dann gewiint das System diese Energieformen. Weitere Details dazu gibt es in den Lerninhalten "Arbeit und Wärme".
 
 ::: {.callout-important collapse="false"}
 
@@ -287,13 +287,13 @@ Besonders die zweite Auslegung des Hauptsatzes ist interessant, weil es schon et
 
 ### Geschlossene Systeme
 
-Ein geschlossenes System kann keine Volumenarbeit tätigen noch einer Arbeit unterworfen werden da $\Delta V = 0$. Der Austausch von Wärme kann jedoch stattfinden. @eq-u wird bei $W = 0$ zu
+Wenn ein geschlossenes System keine Volumenarbeit tätigen noch einer andere Form von Arbeit unterworfen werden kann folgt $\Delta V = 0$. Der Austausch von Wärme kann jedoch immer noch stattfinden. @eq-u wird bei $W = 0$ zu
 
 $$
 \Delta U = Q.
 $$
 
-In geschlossenen Systemen kann also die innere Energie nur durch Wärme verändert werden. Diese Veränderung der Wärmenergie ist anders als viele Phänomene im Alltagsleben. Die Wärmeenergie in geschlossenen Systemen wird mithilfe der Wärmekapazität bei konstantem Volumen $C_V$ berechnet. Das heisst 
+In geschlossenen Systemen, die keine Arbeit mit der Umgebung austauschen, kann also die innere Energie nur durch Wärme verändert werden. Diese Veränderung der Wärmenergie ist anders als viele Phänomene im Alltagsleben. Die Wärmeenergie in geschlossenen Systemen wird mithilfe der Wärmekapazität bei konstantem Volumen $C_V$ berechnet. Das heisst 
 
 $$
 Q = C_V \Delta T
